@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+
+  grid-template-areas:
+    "molecule blocks"
+    "chat chat";
+}
+
+.content p {
+  color: #fff;
+}
+
+.content * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.molecular-view {
+  grid-area: molecule;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.blocks-view {
+  grid-area: blocks;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.chat {
+  grid-area: chat;
+}
+
+.text-input {
+  width: 100%;
+  height: 100%;
+}
+
+.text-input textarea {
+  width: 95%;
+  height: 80%;
+  margin: 10px;
+}
+
+.text-input .buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.viewport {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
